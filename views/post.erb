@@ -1,0 +1,12 @@
+
+
+<h1> You are looking at Post #<%= @post.id %> </h1>
+<p> Title:  <%= @post.title %> </p>
+<p>Description: <%= @post.body %> </p>
+
+<div class="container">
+  <form action="/post/<%= @post.id %>" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <button type="submit"> Delete Post </button>
+</form>
+</div>
